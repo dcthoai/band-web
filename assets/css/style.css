@@ -6,6 +6,7 @@
 }
 
 html{
+    scroll-behavior: smooth;
     font-family: "Lato", sans-serif;
 }
 
@@ -381,12 +382,12 @@ html{
     font-size: 24px;
 }
 
-#footer .icons .fa-brands{
+#footer .icons .social{
     opacity: 0.6;
     line-height: 1.4;
 }
 
-#footer .icons .fa-brands:hover{
+#footer .icons .social:hover{
     opacity: 0.4;
 }
 
