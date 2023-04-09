@@ -1,0 +1,402 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Lato", sans-serif;
+}
+
+/* Begin: Header */
+#header{
+    width: 100vw;
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Begin: Navigation */
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav li a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 20px;
+}
+
+#nav .fa-caret-down{
+    font-size: 14px;
+}
+
+/* 2 selector css dung chung */
+#nav > li:hover > a,   
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav{
+    min-width: 120px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #888888;
+}
+
+#nav .subnav a{
+    color: #000;
+    line-height: 35px;
+    padding: 0 8px;
+    width: 120px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+/* End: Navigation */
+
+/* Search */
+#header .search-btn{
+    width: 80px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #ff4444;
+}
+
+#header .search-btn .fa-search{
+    font-size: 16px;
+    color: #fff;
+}
+/* End: Header */
+
+/* Begin: Slider */
+#slider{
+    color: #fff;
+    margin-top: 46px;
+    padding-top: 50%; /* height = 50% width */
+    background: url(/assets/img/slider/slider1-los-angeles.jpg) top center /cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content{
+    width: 50%;
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    transform: translateX(50%);
+}
+
+#slider .text-heading{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#slider .text-description{
+    padding: 32px 16px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+/* End: Slider */
+
+/* Begin: Content */
+#content{
+    position: relative;
+}
+
+#content h2{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+#content .sub-heading{
+    color: #757575;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+/* Introduction */
+#content .introduction{
+    background-color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+    box-sizing: inherit;
+}
+
+#content .introduction .paragraph{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#content .introduction .profile{
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#content .member{
+    width: 100%;
+}
+
+#content .member .name-member{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#content .member img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+    #content .introduction .profile{
+        flex-direction: row;
+    }
+
+    #content .introduction .member{
+        width: 33.3333%;
+    }
+}
+
+/* Tour Date */
+#content .container{
+    width: 100%;
+    background-color: #000;
+}
+
+#content .tour-date{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+    color: #fff;
+    
+}
+
+#content .tour-tickets li{
+    color: #757575;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    list-style-type: none;
+    padding: 8px 16px;
+}
+
+#content .tour-tickets span{
+    margin: 0px 16px;
+    padding: 3px 8px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #ff4444;
+}
+
+#content .tour-tickets .tag{
+    margin: -5px 16px;
+    padding: 3px 8px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    float: right;
+}
+
+#content .buy-tickets{
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#content .buy-tickets .tour-place{
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+
+#content .tour-place img:hover{
+    opacity: 0.6;
+}
+
+#content .tour-place .name-tour{
+    margin: 0 16px;
+}
+
+#content .name-tour p{
+    color: #000;
+    margin: 15px 0;
+}
+
+#content .name-tour .buy{
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+}
+
+#content .name-tour .buy:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+@media (min-width: 600px) {
+    #content .buy-tickets{
+        flex-direction: row;
+    }
+
+    #content .buy-tickets .tour-place{
+        width: 33.3333%;
+        margin-bottom: 0;
+    }
+
+    #content .buy-tickets .tour-place-mid{
+        margin: 0 16px;
+    }
+}
+
+/* Contact */
+#content .contact{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+    box-sizing: inherit;
+    background-color: #fff;
+    text-align: center;
+
+}
+
+#content .contact .wrapper{
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#content .contact input{
+    border: 1px solid #ddd;
+    display: block;
+}
+
+#content .wrapper .contact-address{
+    flex: 1;
+    text-align: start;
+}
+
+#content .contact-address li{
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 540;
+}
+
+#content .wrapper .form{
+    display: block;
+    flex: 1;
+    padding: 8px 0;
+    position: relative;
+}
+
+#content .form .input{
+    width: 100%;
+}
+
+#content .form .message{
+    margin-top: 8px;
+    width: 100%;
+}
+
+#content .wrapper .send-btn{
+    display: block;
+    margin: 16px 0;
+    padding: 8px 16px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    right: 0;
+}
+
+#content .wrapper .send-btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+@media (min-width: 600px){
+    #content .contact .wrapper{
+        flex-direction: row;
+    }
+
+    #content .form .input{
+        float: left;
+        width: 49.99%;
+        margin-bottom: 8px;
+        padding-left: 8px;
+    }
+
+    #content .form .input:first-child{
+        padding-left: 0;
+        padding-right: 8px;
+    }
+}
+/* End: Content */
+
+/* Begin: Footer */
+#footer{
+    margin-top: 32px;
+    text-align: center;
+    background-color: #f1f1f1;
+    
+}
+
+#footer .icons{
+    padding: 64px 16px;
+    font-size: 24px;
+}
+
+#footer .icons .fa-brands{
+    opacity: 0.6;
+    line-height: 1.4;
+}
+
+#footer .icons .fa-brands:hover{
+    opacity: 0.4;
+}
+
+#footer .icons p, #footer .icons a{
+    font-size: 15px;
+    color: #757575;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+/* End: Footer */
+
+
+
