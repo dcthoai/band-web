@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Band</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons/favicon.jpg">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="/assets/fonts/font-awesome/css/all.css"> -->
@@ -15,7 +15,7 @@
         <!-- Header -->
         <div id="header">
             <ul id="nav">
-                <li> <a href="#">HOME</a> </li>
+                <li class="home"> <a href="#">HOME</a> </li>
                 <li> <a href="#band">BAND</a> </li>
                 <li> <a href="#tour">TOUR</a> </li>
                 <li> <a href="#contact">CONTACT</a> </li>
@@ -34,6 +34,21 @@
 
             <div class="search-btn">
                 <i class="fa fa-search"></i>
+                <i class="fa fa-bars"></i>
+
+                <ul class="toolbars">
+                    <li class="small-nav"><a style="width: 100%;" href="#band">BAND</a></li>
+                    <li class="small-nav"><a style="width: 100%;" href="#tour">TOUR</a></li>
+                    <li class="small-nav"><a style="width: 100%;" href="#contact">CONTACT</a></li>
+                    <li class="small-nav more-small-nav">
+                        <a href="#">MORE</a>  
+                        <ul class="sub-small-nav">
+                            <li> <a href="#">Merchendise</a> </li>
+                            <li> <a href="#">Extras</a> </li>
+                            <li> <a href="#">Media</a> </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div> 
         <!-- End: Header -->

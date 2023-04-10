@@ -22,7 +22,7 @@ html{
     justify-content: space-between;
 }
 
-/* Begin: Navigation */
+/* Navigation */
 #nav li{
     display: inline-block;
     position: relative;
@@ -66,7 +66,6 @@ html{
 #nav li:hover .subnav{
     display: block;
 }
-/* End: Navigation */
 
 /* Search */
 #header .search-btn{
@@ -85,6 +84,92 @@ html{
 #header .search-btn .fa-search{
     font-size: 16px;
     color: #fff;
+}
+
+#header .search-btn .fa-bars{
+    font-size: 16px;
+    color: #fff;
+    display: none;
+}
+
+#header .search-btn .toolbars{
+    display: none;
+}
+
+@media (max-width: 600px){
+    #header #nav > li,
+    #header .search-btn i{
+        display: none;
+    }
+
+    #header #nav .home{
+        display: inline-block;
+    }
+
+    #header .search-btn .fa-bars{
+        display: block;
+    }
+
+    #header .search-btn:hover,
+    #header .search-btn:hover .fa-bars{
+        color: #000;
+        background-color: #ccc;
+    }
+
+    #header .search-btn:hover .toolbars{
+        display: block;
+    }
+
+    #header .search-btn .toolbars{
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 46px;
+    }    
+
+    #header .toolbars .small-nav{
+        list-style-type: none;
+    }
+
+    #header .small-nav:hover,
+    #header .small-nav:hover > a{
+        color: #000;
+        background-color: #ccc;
+    }
+    
+    .toolbars .small-nav > a{
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 46px;
+        padding-left: 20px;
+    }
+
+    .toolbars .sub-small-nav{
+        min-width: 160px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px #888888;
+    }
+
+    .toolbars .sub-small-nav a{
+        width: 100%;
+        color: #000;
+        line-height: 35px;
+        text-decoration: none;
+        padding: 0 32px;
+    }
+
+    .toolbars .more-small-nav:hover .sub-small-nav{
+        display: block;
+    }
+
+    .more-small-nav .sub-small-nav li:hover {
+        background-color: #ccc;
+    }
 }
 /* End: Header */
 
@@ -396,6 +481,3 @@ html{
     margin: 15px 0;
 }
 /* End: Footer */
-
-
-
